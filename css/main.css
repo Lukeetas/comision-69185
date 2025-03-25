@@ -1,0 +1,274 @@
+/* ----------------------------------- HEADER ----------------------------------------------------- */
+/* aplica estilo a toda la etiqueta del header */
+header {
+    display: flex;          /* organiza los elementos del header en una fila */
+    align-items: center;    /* centra verticalmente los items que contiene el header */
+    justify-content: space-between; /* como el header solo tiene dos "hijos" manda uno a cada punta */
+    background-color: black;       /* color de fondo */
+    color: white;                   /* color de texto */
+    padding: 10px 20px;             /* genera espacio interno */
+}
+
+/*aplica estilo por nombre de clase */
+.logo {
+    display: flex;          /* alinea la img y el h1 horizontalmente */
+    align-items: center;    /* centra verticalmente los items */
+    gap: 25px;      /* espacio entre el h1 y la img */
+}
+
+/* aplica estilo al h1 dentro de la clase logo */
+.logo h1{
+    font-size: 25px;        /* tamaño del h1 */
+    white-space: nowrap;    /* hace que el texto se mantenga en un solo renglon */
+    font-weight: 300;       /* le saco un poco de negrita a la que viene en el h1 por defecto */
+}
+
+/* aplica estilo a la img dentro de la clase logo */
+.logo img{
+    width: 40px;
+    height: auto;
+}
+
+
+/* ------------------------------------ MAIN ---------------------------------------------------------*/
+/* ------------------------------------- MAIN CONTACTO ---------------------------------------------- */
+.contacto {             /* acomoda el espacio que hay para cada "renglon" */
+    width: 90%;         /* le dice que parte de ese ancho maximo usar */
+    max-width: 500px;   /* le da un ancho maximo a los campos */
+    margin: 15px;       /* margen */
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column; /* alinea los items como columna en vez de horizontalmente */
+    gap: 10px;              /* espacio entre elementos */
+}
+
+.contacto label {
+    font-weight: bold;  /* negrita a los label */
+}
+
+/* estilo general de los input, el select y el textarea (todo menos el boton si no me equivoco) */
+.contacto input,
+.contacto textarea,
+.contacto select {
+    width: 100%;        /* que ocupen todo el ancho disponible */
+    padding: 8px;       
+    border: 1px solid #ccc;     /* borde */
+    border-radius: 5px;         /* redondea el borde */
+}
+
+.contacto textarea {
+    resize: vertical; /* permite agrandar el cuadro de texto */
+}
+
+/* estilo del botón */
+.contacto input[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 10px;      
+    border: none;       
+    border-radius: 5px; /* redondea borde */
+    cursor: pointer;    /* cambia el mouse cuando lo pasas por arriba */
+}
+
+
+/* ------------------------------------- MAIN CUIDADOS ----------------------------------------------------- */
+
+.cuidados {
+    width: 90%;             /* defino que porcentaje de ese ancho (de nuevo la caja) utilizo */
+    max-width: 600px;       /* defino un ancho (una caja) */
+    margin: 0 auto;         /* creo que le deja 0 de margen arriba y abajo y me centra el espacio que yo defini con width (como si fuera una gran caja) horizontalmente, en caso de no tener esto, se me moveria todo el contenido entero (la caja) hacia la izquierda */
+    text-align: center;     /* centra los parrafos y el titulo horizontalmente */
+}
+
+.cuidados h2 {
+    font-size: 22px;        /* tamaño de la letra */
+    margin-bottom: 0;       /* para que me quede bien pegado al parrafo pseudo subtitulo */
+}
+
+.cuidados p {               /* tamaño y negrita del subtitulo (creo que lo podria haber puesto con h3 pero no estoy seguro) */
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0;      /* para que me quede bien pegado al h2 */
+}
+
+.cuidados div p {           /* tamaño y negrita de la letra de los parrafos */
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cuidados ul {
+    margin-top: 40px;       /* espacio entre la lista y los parrafos que tiene arriba */
+    list-style-type: none; /* saca los puntos de la lista */
+    padding: 0;             /* elimina el espacio interno que los navegadores le ponen automaticamente a las listas desordenadas */
+}
+
+.cuidados li {
+    text-align: left;             /* texto a la izquierda */
+    background-color: #f9f9f9; /* fondo suave */
+    padding: 10px;          /* espacio interno en cada item de la lista */
+    margin-bottom: 10px;    /* espacio entre cada item de la lista */
+    border-left: 5px solid black; /* línea decorativa a la izquierda */
+    border-radius: 5px; /* bordes redondeados */
+}
+
+
+/* ------------------------------------ MAIN INDEX-----------------------------------------------------> */
+
+.index {
+    height: 100vh; /* ocupar toda la pantalla */
+    background-image: url("../img/fondo-rial.png"); /* imagen de fondo */
+    background-size: cover;     /* se ajusta bien a toda la pantalla */
+    background-position: center;    /* la centra */
+    background-repeat: no-repeat;      /* hace que no se repita */  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: rgb(221, 221, 221);
+    padding: 20px;          /* margen dentro de la img de fondo */
+}
+
+
+.central h2 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.central p {
+    font-size: 22px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.sobre-mi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+.sobre-mi img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%; 
+    border: 2px solid black;
+    object-fit: cover;  
+}
+
+.sobre-mi p{
+        max-width: 650px;
+        text-align: left;
+}
+
+    
+
+/* ----------------------------------- MAIN PORTAFOLIO ------------------------------------------------------ */
+
+.portafolio {
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+    margin: 0;
+}
+
+.galeria {
+    display: grid;          /* organiza las imagenes en una cuadricula */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));    /* auto-fit ajusta la cantidad de columnas segun el ancho de la pantalla */         /* minmax (250px, 1fr), el ancho minimo para una columna son 250px y el ancho maximo es todo el espacio que tenga disponible */
+    gap: 10px;
+    padding: 20px;          
+    max-width: 1000px;      /* hace que la galeria tenga un ancho de maximo 1000px para que no ocupe toda la pantalla en monitores grandes */
+    margin: auto;       /* centra la galeria horizontalmente en la pagina */
+}
+
+.galeria img {
+    width: 100%;            /* hace que ocupe todo el ancho de su "casillero" en la cuadricula */
+    height: 100%;           /* se deforma un poco la imagen original pero si le pongo "auto" no me gusta como esteticamente algunas fotos ocupan mas lugar y otras menos dentro de su "caja" */
+    border-radius: 10px;
+}
+
+/* --------------------------------------- MAIN BLOG ------------------------------------------------- */
+
+/* ESTILO PARA MOBILE  */
+.blog {
+    display: block;  /* apila la imagen, el texto y la tabla */
+    text-align: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contenido, .tabla {
+    width: 100%;  /* ocupa todo el ancho */
+}
+
+.contenido img {
+    width: 100%; /* ocupa todo el ancho */
+    border-radius: 10px;
+}
+
+.tabla {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;  
+}
+
+.tabla table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla table td {
+    padding: 10px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* MEDIA QUERY PARA DESKTOP */
+@media (min-width: 768px) {
+    .blog {
+        display: flex;  /*  paso a tener en una columna texto e img y en la otra la tabla */
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .contenido {
+        width: 65%;
+    }
+
+    .tabla {
+        width: 25%;
+        margin-top: 0;  
+    }
+}
+
+/* ------------------------------------- FOOTER -------------------------------------------------------- */
+
+/* se aplica el estilo a toda la etiqueta del footer */
+footer {
+    display: flex;              /* organiza todos los elementos en una sola fila, de caso contrario quedaria    el texto en un renglon y las imagenes abajo, en otro renglon */
+    justify-content: space-between; /* deja el texto a la izquierda y manda los iconos a la derecha */
+    align-items: center;        /* alinea verticalmente los elementos */
+    padding: 10px 20px;         /* agrega espacio interno, un margen*/
+    background-color: black;    /* fondo de color negro */
+    color: white;               /* color del texto blanco*/
+}
+
+/* se aplica estilo por nombre de clase */ 
+.redes {
+    display: flex;  /* segun chat gpt deberia poner esto acá y los iconos se me "acomodan un poco más aunque no entiendo por que no puedo hacerlo simplemente con un gap más grande */
+    gap: 15px; /* deja espacio entre los iconos */
+}
+
+/* aplica estilos a todas las imagenes dentro de la clase redes */
+.redes img {
+    width: 30px; /* cambia el tamaño de los iconos */
+    height: 30px;
+}
